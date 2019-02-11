@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include<math.h>
+
+
+int main(void){
+	
+	int pnum;
+	float rprice;
+	int quantity;
+	float total;
+	float rprice1;
+	float rprice2;
+	float rprice3;
+	float rprice4;
+	float rprice5;
+	int counter=0;
+
+
+	printf("Please enter quantity of items sold\n");
+	scanf("%d", &quantity);
+			
+	puts("Enter 0 for Product Number to get grand total , Enter EOF to end program");
+	puts("Enter Product Number");
+	
+	
+	while((pnum = getchar()) != EOF)
+	{ 
+	
+		
+		switch(pnum){
+			case'1':
+				rprice= 2.98;
+				printf("The retail price of product 1  is %.2f\n", rprice);
+				rprice1 = rprice * quantity;
+				printf("Total Revenue for product 1 is %.2f\n", rprice1);
+					++counter;
+				break;
+			case'2':
+				rprice=4.50;
+				printf("The retail price of product 2 is %.2f\n", rprice);
+				rprice2 = rprice * quantity;
+				printf("Total Revenue for product 2 is %.2f\n", rprice2);
+				++counter;
+				break;
+			case'3'	:
+				rprice= 9.98;
+				printf("The retail price of product 3 is %.2f\n", rprice);
+				rprice3 = rprice * quantity;
+				printf("Total Revenue for product 3 is %.2f\n", rprice3);
+				++counter;
+				break;
+			case'4':
+				rprice = 4.49;
+				printf("The retail price of product 4 is %.2f\n", rprice);
+				rprice4 = rprice * quantity;
+				printf("Total Revenue for product 4 is %.2f\n", rprice4);
+				++counter;
+				break;
+			case'5':
+				rprice = 6.87;
+				printf("The retail price of product 5 is %.2f\n", rprice);
+				rprice5 = rprice * quantity;
+				printf("Total Revenue for product 5 is %.2f\n", rprice5);
+				++counter;
+				break;
+				
+			case'\n':
+			case'\t':
+			case' ':
+				
+				break;
+				
+			default:
+				printf("Please Enter a number from 1 to 5\n");
+				
+				
+				break;
+			case '0':
+				total = (rprice1 +rprice2+rprice3 +rprice4+rprice5);
+				printf("The total Revenue for all products you entered is  %.2f\n", total);
+				break;
+				puts("Enter 0 for grand total, Enter EOF to end program");
+				
+				++counter;
+			
+	
+		}
+		
+			while(counter >0){
+
+	printf("Please enter quantity of items sold\n");
+	scanf("%d", &quantity);
+	--counter;
+	puts("Enter 0 for Product Number to get grand total , Enter EOF to end program");
+	puts("Enter Product Number");
+	
+	}
+	}	
+	
+	
+	
+	
+}
+			
+			
+			
+			
+	
